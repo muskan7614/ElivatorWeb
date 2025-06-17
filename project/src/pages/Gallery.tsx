@@ -1,0 +1,258 @@
+import React, { useState } from 'react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import Econovator2 from '../Assets/Econovator2.jpg';
+import LuxuryHotelElevator from '../Assets/LuxuryHotelElevator.jpg';
+import residential1 from '../Assets/residential1.webp';
+import Hospital from '../Assets/Hospital.jpg';
+import ShoppingMall from '../Assets/ShoppingMall.jpg';
+import Corporate from '../Assets/Corporate.jpg';
+import Premium from '../Assets/Premium.jpg';
+import fivestar from '../Assets/fivestart.jpg';
+import MedicalCenter from '../Assets/MedicalCenter.jpg';
+import DepartMentStore from '../Assets/DepartMentStore.jpg';
+import Tech from '../Assets/Tech.jpg';
+import LuxuryApartment from '../Assets/LuxuryApartment.jpg';
+
+
+const galleryImages = [
+  {
+    id: 1,
+    src: Econovator2,
+    title: 'Modern Office Elevator',
+    category: 'Commercial'
+  },
+  {
+    id: 2,
+    src: LuxuryHotelElevator,
+    title: 'Luxury Hotel Elevator',
+    category: 'Hospitality'
+  },
+  {
+    id: 3,
+    src: residential1,
+    title: 'Residential Complex',
+    category: 'Residential'
+  },
+  {
+    id: 4,
+    src: Hospital,
+    title: 'Hospital Elevator',
+    category: 'Healthcare'
+  },
+  {
+    id: 5,
+    src: ShoppingMall,
+    title: 'Shopping Mall Elevator',
+    category: 'Retail'
+  },
+  {
+    id: 6,
+    src: Corporate,
+    title: 'Corporate Headquarters',
+    category: 'Commercial'
+  },
+  {
+    id: 7,
+    src: Premium,
+    title: 'Premium Residential Tower',
+    category: 'Residential'
+  },
+  {
+    id: 8,
+    src: fivestar,
+    title: 'Five Star Hotel',
+    category: 'Hospitality'
+  },
+  {
+    id: 9,
+    src:MedicalCenter,
+    title: 'Medical Center',
+    category: 'Healthcare'
+  },
+  {
+    id: 10,
+    src: DepartMentStore,
+    title: 'Department Store',
+    category: 'Retail'
+  },
+  {
+    id: 11,
+    src: Tech,
+    title: 'Tech Campus',
+    category: 'Commercial'
+  },
+  {
+    id: 12,
+    src: LuxuryApartment,
+    title: 'Luxury Apartments',
+    category: 'Residential'
+  }
+];
+
+const categories = ['All', 'Commercial', 'Residential', 'Hospitality', 'Healthcare', 'Retail'];
+
+export const Gallery: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+  const filteredImages = selectedCategory === 'All' 
+    ? galleryImages 
+    : galleryImages.filter(image => image.category === selectedCategory);
+
+  const openLightbox = (imageId: number) => {
+    setSelectedImage(imageId);
+  };
+
+  const closeLightbox = () => {
+    setSelectedImage(null);
+  };
+
+  const navigateImage = (direction: 'prev' | 'next') => {
+    if (selectedImage === null) return;
+    
+    const currentIndex = filteredImages.findIndex(img => img.id === selectedImage);
+    let newIndex;
+    
+    if (direction === 'prev') {
+      newIndex = currentIndex > 0 ? currentIndex - 1 : filteredImages.length - 1;
+    } else {
+      newIndex = currentIndex < filteredImages.length - 1 ? currentIndex + 1 : 0;
+    }
+    
+    setSelectedImage(filteredImages[newIndex].id);
+  };
+
+  const selectedImageData = selectedImage 
+    ? filteredImages.find(img => img.id === selectedImage)
+    : null;
+
+  return (
+    <div className="pt-24 pb-20">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 bg-gradient-to-br  bg-[#1f1f1f] text-yellow-600">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+            Project Gallery
+          </h1>
+          <p className="text-xl lg:text-2xl text-purple-100 max-w-3xl mx-auto leading-relaxed">
+            Explore our portfolio of successful elevator installations across 
+            various sectors and discover the quality of our craftsmanship.
+          </p>
+        </div>
+      </section>
+
+      {/* Category Filter */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-3 rounded-full font-medium transition-colors duration-200 ${
+                  selectedCategory === category
+                    ? 'bg-yellow-600 text-white'
+                    : 'bg-white text-gray-700 hover:bg-yellow-100 hover:text-black-600'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Grid */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {filteredImages.map((image) => (
+              <div
+                key={image.id}
+                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onClick={() => openLightbox(image.id)}
+              >
+                <img
+                  src={image.src}
+                  alt={image.title}
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-lg font-semibold mb-1">{image.title}</h3>
+                  <span className="text-sm text-gray-300">{image.category}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Lightbox */}
+      {selectedImage && selectedImageData && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+          <div className="relative max-w-4xl max-h-full">
+            <button
+              onClick={closeLightbox}
+              className="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
+            >
+              <X className="h-8 w-8" />
+            </button>
+            
+            <button
+              onClick={() => navigateImage('prev')}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 z-10"
+            >
+              <ChevronLeft className="h-8 w-8" />
+            </button>
+            
+            <button
+              onClick={() => navigateImage('next')}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 z-10"
+            >
+              <ChevronRight className="h-8 w-8" />
+            </button>
+            
+            <img
+              src={selectedImageData.src}
+              alt={selectedImageData.title}
+              className="max-w-full max-h-full object-contain"
+            />
+            
+            <div className="absolute bottom-4 left-4 text-white">
+              <h3 className="text-xl font-semibold mb-1">{selectedImageData.title}</h3>
+              <span className="text-gray-300">{selectedImageData.category}</span>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* CTA Section */}
+      <section className="py-20 bg-white-600 text-black px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+            Ready to Start Your Project?
+          </h2>
+          <p className="text-lg text-black-100 mb-8 leading-relaxed">
+            Let us help you create an elevator solution that matches your vision and requirements. 
+            Contact our team today for a consultation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+919354927034"
+              className="bg-white text-black-600 hover:bg-yellow-700 border border-yellow-600 font-semibold px-8 py-4 rounded-lg transition-colors duration-200 text-black"
+            >
+              Call for Consultation
+            </a>
+            <a
+              href="mailto:info@trezorelevators.com"
+              className="bg-white-700 hover:bg-yellow-700 border border-yellow-600 text-black font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
+            >
+              Request Quote
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
