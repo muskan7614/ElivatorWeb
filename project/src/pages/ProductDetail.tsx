@@ -446,14 +446,14 @@ export const ProductDetail: React.FC = () => {
           {/* Contact Buttons */}
           <div className="flex flex-col sm:flex-row gap-2 mt-auto">
             <a
-              href="tel:+919354927034"
+              href="tel:08045729031"
               className="flex items-center justify-center space-x-2 bg-transparent-600 hover:bg-yellow-700 border border-yellow-700 text-black px-4 py-2 rounded-lg transition-colors duration-200"
             >
               <Phone className="h-5 w-5" />
               <span>Call for Quote</span>
             </a>
             <a
-              href="mailto:info@trezorelevators.com"
+              href="mailto:info@liftascomponents.com"
               className="flex items-center justify-center space-x-2 bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
             >
               <Mail className="h-5 w-5" />

@@ -239,13 +239,13 @@ export const Gallery: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+919354927034"
+              href="tel:08045729031"
               className="bg-white text-black-600 hover:bg-yellow-700 border border-yellow-600 font-semibold px-8 py-4 rounded-lg transition-colors duration-200 text-black"
             >
               Call for Consultation
             </a>
             <a
-              href="mailto:info@trezorelevators.com"
+              href="mailto:info@liftascomponents.com"
               className="bg-white-700 hover:bg-yellow-700 border border-yellow-600 text-black font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
             >
               Request Quote

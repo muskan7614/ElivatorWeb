@@ -31,7 +31,7 @@ export const AboutUs: React.FC = () => {
       <section className="relative py-20 px-4 bg-gradient-to-br from-blue-600 to-teal-600 text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-            About Trezor Elevators
+            About Liftas Components
           </h1>
           <p className="text-xl lg:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
             17+ years of excellence in vertical transportation solutions, 
@@ -50,7 +50,7 @@ export const AboutUs: React.FC = () => {
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Founded with a vision to revolutionize vertical transportation in India, 
-                Trezor Elevators has grown from a small startup to a leading name in the elevator industry. 
+                Liftas Components has grown from a small startup to a leading name in the elevator industry. 
                 Our journey began with a simple mission: to provide safe, reliable, and innovative 
                 elevator solutions that enhance the way people move within buildings.
               </p>
@@ -69,7 +69,7 @@ export const AboutUs: React.FC = () => {
             <div className="relative">
               <img
                 src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&h=600&q=80"
-                alt="Trezor Elevators Office"
+                alt="Liftas Components Office"
                 className="w-full rounded-2xl shadow-xl"
               />
             </div>

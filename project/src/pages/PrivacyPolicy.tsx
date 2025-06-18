@@ -231,9 +231,9 @@ export const PrivacyPolicy: React.FC = () => {
                 If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us:
               </p>
               <div className="space-y-2 text-gray-700">
-                <p><strong>Email:</strong> privacy@trezorelevators.com</p>
-                <p><strong>Phone:</strong> +91-9354927034</p>
-                <p><strong>Address:</strong> B-2/1, 2nd Floor, Khasra No-818, Chattarpur Extension, New Delhi – 110074</p>
+                <p><strong>Email:</strong> privacy@liftascomponents.com</p>
+                <p><strong>Phone:</strong> 08045729031</p>
+                <p><strong>Address:</strong> Liftas Components Private Limited Dedicated Seat 07 Situated at B 38, Old DLF Sector 14, Gurugram, Haryana, 122006,  India</p>
               </div>
             </div>
 

@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4">Liftas Components</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
               With a dedicated engineering team, expansive supplier network and diverse capabilities, 
-              Trezor Elevators has the manufacturing experience ready to support you with your next program.
+              Liftas Components has the manufacturing experience ready to support you with your next program.
             </p>
             <div className="flex space-x-3">
               <a
@@ -79,6 +79,8 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
+          
+
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-white">Services</h3>
@@ -113,19 +115,20 @@ export const Footer: React.FC = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-yellow-400 mt-1 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">
-                  B-2/1, 2nd Floor, Khasra No-818, Chattarpur Extension, New Delhi – 110074
+                 Liftas Components Private Limited Dedicated Seat 07 Situated at B 38, Old DLF Sector 14, Gurugram, Haryana, 122006,  India
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-yellow-400" />
-                <a href="tel:+919354927034" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  +91 935 492 7034
+                <a href="tel:08045729031" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Call Us
+                 08045729031
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-yellow-400" />
-                <a href="mailto:info@trezorelevators.com" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  info@trezorelevators.com
+                <a href="mailto:info@liftascomponents.com" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  info@liftascomponents.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">

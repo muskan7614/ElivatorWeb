@@ -13,7 +13,7 @@ export const AboutSection: React.FC = () => {
               <span className="text-yellow-600"> Vertical Transportation</span>
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              For over 17 years, Trezor Elevators has been at the forefront of elevator technology, 
+              For over 17 years, Liftas Components has been at the forefront of elevator technology, 
               providing innovative solutions that combine safety, reliability, and cutting-edge design. 
               Our commitment to excellence has made us the trusted choice for residential, commercial, 
               and industrial projects across the region.
@@ -26,7 +26,7 @@ export const AboutSection: React.FC = () => {
               to="/trezor-story"
               className="inline-flex items-center space-x-2 bg-transparent-600 hover:bg-yellow-600 border border-yellow-600 text-black font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
-              <span>View Trezor Story</span>
+              <span>View Liftas Story</span>
               <ArrowRight className="h-5 w-5" />
             </Link>
           </div>

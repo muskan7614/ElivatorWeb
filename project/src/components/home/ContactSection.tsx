@@ -5,6 +5,8 @@ import { Send } from 'lucide-react';
 interface ContactFormData {
   name: string;
   email: string;
+  phone: string;
+  subject: string;
   message: string;
 }
 
@@ -42,69 +44,106 @@ export const ContactSection: React.FC = () => {
           </div>
 
           <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  {...register('name', { required: 'Name is required' })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-200"
-                  placeholder="Enter your full name"
-                />
-                {errors.name && (
-                  <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
-                )}
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  {...register('email', { 
-                    required: 'Email is required',
-                    pattern: {
-                      value: /^\S+@\S+$/i,
-                      message: 'Please enter a valid email address'
-                    }
-                  })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-200"
-                  placeholder="Enter your email address"
-                />
-                {errors.email && (
-                  <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
-                )}
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  {...register('message', { required: 'Message is required' })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-200 resize-none"
-                  placeholder="Tell us about your project requirements..."
-                />
-                {errors.message && (
-                  <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
-                )}
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-yellow-600 hover:bg-yellow-700 text-black font-semibold  hover:border-yellow-700 py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
-              >
-                <span>Send Message</span>
-                <Send className="h-5 w-5" />
-              </button>
-            </form>
+            <form action='https://formsubmit.co/your-email@gmail.com' method='POST' className="space-y-6">
+                            <div className="grid md:grid-cols-2 gap-6">
+                              <div>
+                                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                                  Full Name *
+                                </label>
+                                <input
+                                  type="text"
+                                  id="name"
+                                  {...register('name', { required: 'Name is required' })}
+                                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-200"
+                                  placeholder="Enter your full name"
+                                />
+                                {errors.name && (
+                                  <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
+                                )}
+                              </div>
+            
+                              <div>
+                                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                                  Phone Number
+                                </label>
+                                <input
+                                  type="tel"
+                                  id="phone"
+                                  {...register('phone')}
+                                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-200"
+                                  placeholder="Enter your phone number"
+                                />
+                              </div>
+                            </div>
+            
+                            <div>
+                              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                                Email Address *
+                              </label>
+                              <input
+                                type="email"
+                                id="email"
+                                {...register('email', { 
+                                  required: 'Email is required',
+                                  pattern: {
+                                    value: /^\S+@\S+$/i,
+                                    message: 'Please enter a valid email address'
+                                  }
+                                })}
+                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-200"
+                                placeholder="Enter your email address"
+                              />
+                              {errors.email && (
+                                <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
+                              )}
+                            </div>
+            
+                            <div>
+                              <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                                Subject *
+                              </label>
+                              <select
+                                id="subject"
+                                {...register('subject', { required: 'Please select a subject' })}
+                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-200"
+                              >
+                                <option value="">Select a subject</option>
+                                <option value="new-installation">New Installation</option>
+                                <option value="maintenance">Maintenance Services</option>
+                                <option value="repair">Repair Services</option>
+                                <option value="modernization">Modernization</option>
+                                <option value="quote">Request Quote</option>
+                                <option value="other">Other</option>
+                              </select>
+                              {errors.subject && (
+                                <p className="mt-1 text-sm text-red-600">{errors.subject.message}</p>
+                              )}
+                            </div>
+            
+                            <div>
+                              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                                Message *
+                              </label>
+                              <textarea
+                                id="message"
+                                rows={6}
+                                {...register('message', { required: 'Message is required' })}
+                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-200 resize-none"
+                                placeholder="Tell us about your requirements..."
+                              />
+                              {errors.message && (
+                                <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
+                              )}
+                            </div>
+            
+                            <button
+                              type="submit"
+                              className="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+                            >
+                              <span>Send Message</span>
+                              <Send className="h-5 w-5" />
+                            </button>
+                          </form>
           </div>
         </div>
       </div>

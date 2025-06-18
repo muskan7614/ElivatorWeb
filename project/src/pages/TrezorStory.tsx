@@ -6,7 +6,7 @@ export const TrezorStory: React.FC = () => {
     {
       year: '2007',
       title: 'Company Founded',
-      description: 'Trezor Elevators was established with a vision to revolutionize vertical transportation in India.',
+      description: 'Liftas Components was established with a vision to revolutionize vertical transportation in India.',
       icon: Calendar
     },
     {
@@ -100,7 +100,7 @@ export const TrezorStory: React.FC = () => {
                 build a company that would change the landscape of vertical transportation in India.
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Starting with a small team and big dreams, Trezor Elevators was born out of the belief 
+                Starting with a small team and big dreams, Liftas Components was born out of the belief 
                 that every building deserves safe, efficient, and beautifully designed elevator systems. 
                 Our founders brought together decades of combined experience in engineering, design, 
                 and customer service to create a company that would prioritize quality above all else.
@@ -113,7 +113,7 @@ export const TrezorStory: React.FC = () => {
             <div className="relative">
               <img
                 src="https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Trezor Elevators Beginning"
+                alt="Liftas Components Beginning"
                 className="w-full rounded-2xl shadow-xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-2xl opacity-30" />
@@ -130,7 +130,7 @@ export const TrezorStory: React.FC = () => {
               Our Journey Through the Years
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Key milestones that have shaped Trezor Elevators into the company we are today.
+              Key milestones that have shaped Liftas Components into the company we are today.
             </p>
           </div>
 

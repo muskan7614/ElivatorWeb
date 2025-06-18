@@ -41,17 +41,17 @@ export const ContactUs: React.FC = () => {
     {
       icon: MapPin,
       title: 'Our Address',
-      details: 'B-2/1, 2nd Floor, Khasra No-818, Chattarpur Extension, New Delhi – 110074'
+      details: 'Liftas Components Private Limited Dedicated Seat 07 Situated at B 38, Old DLF Sector 14, Gurugram, Haryana, 122006,  India'
     },
     {
       icon: Phone,
       title: 'Phone Number',
-      details: '+91-9354927034'
+      details: '08045729031'
     },
     {
       icon: Mail,
       title: 'Email Address',
-      details: 'info@trezorelevators.com'
+      details: 'info@liftascomponents.com'
     },
     {
       icon: Clock,
@@ -108,7 +108,7 @@ export const ContactUs: React.FC = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Send us a Message
               </h2>
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+              <form action='https://formsubmit.co/your-email@gmail.com' method='POST' className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -217,12 +217,7 @@ export const ContactUs: React.FC = () => {
                   Visit Our Office
                 </h3>
                 <div className="aspect-video bg-gray-200 rounded-lg mb-6 flex items-center justify-center">
-                  <div className="text-center text-gray-600">
-                    <MapPin className="h-12 w-12 mx-auto mb-2" />
-                    <p>Interactive Map</p>
-                    <p className="text-sm">B-2/1, 2nd Floor, Chattarpur Extension</p>
-                    <p className="text-sm">New Delhi – 110074</p>
-                  </div>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.307530292468!2d77.04271757450333!3d28.470283791431896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d198c9f0ebf03%3A0x58bba09948b2032a!2sLiftas%20Components%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1750220010703!5m2!1sen!2sin" width="600" height="450" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
                   Our office is conveniently located in Chattarpur Extension, New Delhi. 
@@ -238,7 +233,7 @@ export const ContactUs: React.FC = () => {
                   For emergency elevator repairs and breakdowns, our 24/7 hotline is always available.
                 </p>
                 <a
-                  href="tel:+919354927034"
+                  href="tel:08045729031"
                   className="inline-flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
                 >
                   <Phone className="h-5 w-5" />

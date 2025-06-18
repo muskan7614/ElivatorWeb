@@ -6,10 +6,12 @@ import  logo  from '../../Assets/logo.webp'
 
 export const Header: React.FC = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const servicesDropdownRef = useRef<HTMLDivElement>(null);
-  const closeTimer = useRef<NodeJS.Timeout | null>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const productsDropdownRef = useRef<HTMLDivElement>(null);
 
   // Click outside logic
   useEffect(() => {
@@ -28,8 +30,24 @@ export const Header: React.FC = () => {
     };
   }, [isServicesOpen]);
 
+  useEffect(() => {
+    if (!isProductsOpen) return;
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        productsDropdownRef.current &&
+        !productsDropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsProductsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isProductsOpen]);
+
   const handleCallClick = () => {
-    window.location.href = 'tel:+919354927034';
+    window.location.href = 'tel:08045729031';
   };
 
   const handleEmailClick = () => {
@@ -39,6 +57,23 @@ export const Header: React.FC = () => {
   const isActiveLink = (path: string) => {
     return location.pathname === path;
   };
+
+  // At the top of your Navbar.tsx
+const productLinks= [
+  { id: 'econovator', name: 'Econovator' },
+  { id: 'premiavator', name: 'Premiavator' },
+  { id: 'elitavator', name: 'Elitavator' },
+  { id: 'eldevator', name: 'Eldevator' },
+  { id: 'medivator', name: 'Medivator' },
+  { id: 'cargolift', name: 'CargoLift' },
+  { id: 'homelift', name: 'HomeLift' },
+  { id: 'skylift', name: 'SkyLift' },
+  { id: 'greenlift', name: 'GreenLift' },
+  { id: 'smartlift', name: 'SmartLift' },
+  { id: 'luxlift', name: 'LuxLift' },
+  { id: 'quicklift', name: 'QuickLift' }
+];
+
 
   const services = [
     { name: 'AMC', path: '/services/amc' },
@@ -93,23 +128,50 @@ export const Header: React.FC = () => {
               >
                 Home
               </Link>
-              <Link
-                to="/about"
-                className={`font-medium transition-colors duration-200 ${
-                  isActiveLink('/about') ? 'text-yellow-700' : 'text-gray-700 hover:text-yellow-700'
-                }`}
-              >
-                About Us
-              </Link>
+              
+
+              <div className="relative group">
               <Link
                 to="/products"
                 className={`font-medium transition-colors duration-200 ${
                   isActiveLink('/products') ? 'text-yellow-700' : 'text-gray-700 hover:text-yellow-700'
                 }`}
               >
-                Products
-              </Link>
-              <div
+                
+                <div
+  className="relative"
+  ref={productsDropdownRef}
+  onMouseEnter={() => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setIsProductsOpen(true);
+  }}
+  onMouseLeave={() => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setIsProductsOpen(false), 5000);
+  }}
+>
+  <button className="flex items-center space-x-1 font-medium text-gray-700 hover:text-yellow-700 transition-colors duration-200">
+    <span>Products</span>
+    <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`} />
+  </button>
+
+  {isProductsOpen && (
+    <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-100 py-2 z-50">
+      {productLinks.map((product) => (
+        <Link
+          key={product.id}
+          to={`/products/${product.id}`}
+          className="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-colors duration-200"
+        >
+          {product.name}
+        </Link>
+      ))}
+    </div>
+  )}
+</div>
+   
+ </Link>
+    </div>          <div
                 className="relative"
                 ref={servicesDropdownRef}
                 onMouseEnter={() => {
@@ -155,6 +217,16 @@ export const Header: React.FC = () => {
               >
                 Contact Us
               </Link>
+
+                <Link
+                to="/about"
+                className={`font-medium transition-colors duration-200 ${
+                  isActiveLink('/about') ? 'text-yellow-700' : 'text-gray-700 hover:text-yellow-700'
+                }`}
+              >
+                About Us
+              </Link>
+
               <Link
                 to="/testimonials"
                 className={`font-medium transition-colors duration-200 ${
@@ -254,6 +326,7 @@ export const Header: React.FC = () => {
             </div>
           )}
         </div>
+        
       </nav>
     </>
   );

@@ -9,7 +9,7 @@ const testimonials = [
     company: 'Metro Towers',
     rating: 5,
     image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150',
-    text: 'Exceptional service and quality installation. Trezor Elevators exceeded our expectations with their professionalism and attention to detail. Our residents are extremely satisfied with the smooth operation and modern design.',
+    text: 'Exceptional service and quality installation. Liftas Components exceeded our expectations with their professionalism and attention to detail. Our residents are extremely satisfied with the smooth operation and modern design.',
     project: 'Residential Complex - 4 Elevators',
     location: 'Gurgaon'
   },
@@ -142,7 +142,7 @@ export const Testimonials: React.FC = () => {
           </h1>
           <p className="text-xl lg:text-2xl text-yellow-100 max-w-3xl mx-auto leading-relaxed">
             Discover what our valued clients have to say about their experience 
-            with Trezor Elevators and the quality of our services.
+            with Liftas Components and the quality of our services.
           </p>
         </div>
       </section>
@@ -317,7 +317,7 @@ export const Testimonials: React.FC = () => {
                 <textarea
                   rows={5}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent resize-none"
-                  placeholder="Share your experience with Trezor Elevators..."
+                  placeholder="Share your experience with Liftas Components..."
                 />
               </div>
 

@@ -8,7 +8,7 @@ const testimonials = [
     company: 'Metro Towers',
     rating: 5,
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
-    text: 'Exceptional service and quality installation. Trezor Elevators exceeded our expectations with their professionalism and attention to detail. Our residents are extremely satisfied.'
+    text: 'Exceptional service and quality installation. Liftas Components exceeded our expectations with their professionalism and attention to detail. Our residents are extremely satisfied.'
   },
   {
     id: 2,
@@ -51,11 +51,11 @@ export const TestimonialsSection: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            People About Trezor Elevators
+            People About Liftas Components
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Don't just take our word for it. Here's what our satisfied clients have to say 
-            about their experience with Trezor Elevators.
+            about their experience with Liftas Components.
           </p>
         </div>
 
