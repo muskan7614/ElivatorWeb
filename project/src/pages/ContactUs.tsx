@@ -13,29 +13,6 @@ interface ContactFormData {
 export const ContactUs: React.FC = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm<ContactFormData>();
 
-  const onSubmit = async (data: ContactFormData) => {
-  try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbx2Axu7KCKmYCidh-Z8Vo2CHSRT7lT75Lf64zAtbM8qrw-wo8b0MCinnLUHlrCxIpgd/exec", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
-
-    const result = await response.json();
-    if (result.result === "Success") {
-      alert("Thank you for your message! We will get back to you within 24 hours.");
-      reset();
-    } else {
-      alert("Something went wrong. Please try again later.");
-    }
-  } catch (error) {
-    console.error("Error submitting form:", error);
-    alert("There was a problem submitting the form.");
-  }
-};
-
 
   const contactInfo = [
     {

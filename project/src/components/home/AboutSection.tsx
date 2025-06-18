@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+// import { Link } from 'react-router-dom';
+// import { ArrowRight } from 'lucide-react';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -22,13 +22,13 @@ export const AboutSection: React.FC = () => {
               From installation to maintenance, our experienced team ensures every elevator operates 
               at peak performance, delivering smooth and safe transportation for millions of passengers daily.
             </p>
-            <Link
+            {/* <Link
               to="/trezor-story"
               className="inline-flex items-center space-x-2 bg-transparent-600 hover:bg-yellow-600 border border-yellow-600 text-black font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               <span>View Liftas Story</span>
               <ArrowRight className="h-5 w-5" />
-            </Link>
+            </Link> */}
           </div>
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-teal-600 rounded-2xl transform rotate-3"></div>

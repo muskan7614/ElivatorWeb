@@ -1,7 +1,9 @@
 import React from 'react';
 import { Palette, Settings, Lightbulb, Zap } from 'lucide-react';
+import { usePopup } from '../../context/PopupContext';
 
 export const Customisation: React.FC = () => {
+  const { openPopup } = usePopup();
   const categories = [
     {
       icon: Palette,
@@ -230,12 +232,13 @@ export const Customisation: React.FC = () => {
             >
               Schedule Consultation
             </a>
-            <a
-              href="mailto:info@trezorelevators.com"
-              className="bg-indigo-700 hover:bg-indigo-800 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
-            >
-              Request Quote
-            </a>
+            <button onClick={() => {
+                      console.log("Enquiry button clicked");
+                      openPopup();
+                    }} className="bg-indigo-700 hover:bg-indigo-800 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200">
+                      {/* <Mail className="h-5 w-5" /> */}
+                      <span>Get Quote</span>
+                    </button>
           </div>
         </div>
       </section>

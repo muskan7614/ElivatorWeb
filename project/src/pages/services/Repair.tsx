@@ -1,7 +1,9 @@
 import React from 'react';
 import { Clock, Wrench, Shield, CheckCircle } from 'lucide-react';
 
+
 export const Repair: React.FC = () => {
+  
   const services = [
     {
       title: 'Emergency Repair',

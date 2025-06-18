@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight ,Mail} from 'lucide-react';
 import Econovator2 from '../Assets/Econovator2.jpg';
 import LuxuryHotelElevator from '../Assets/LuxuryHotelElevator.jpg';
 import residential1 from '../Assets/residential1.webp';
@@ -12,6 +12,8 @@ import MedicalCenter from '../Assets/MedicalCenter.jpg';
 import DepartMentStore from '../Assets/DepartMentStore.jpg';
 import Tech from '../Assets/Tech.jpg';
 import LuxuryApartment from '../Assets/LuxuryApartment.jpg';
+import { usePopup } from '../context/PopupContext';
+
 
 
 const galleryImages = [
@@ -92,6 +94,7 @@ const galleryImages = [
 const categories = ['All', 'Commercial', 'Residential', 'Hospitality', 'Healthcare', 'Retail'];
 
 export const Gallery: React.FC = () => {
+  const { openPopup } = usePopup();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
@@ -244,12 +247,13 @@ export const Gallery: React.FC = () => {
             >
               Call for Consultation
             </a>
-            <a
-              href="mailto:info@liftascomponents.com"
-              className="bg-white-700 hover:bg-yellow-700 border border-yellow-600 text-black font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
-            >
-              Request Quote
-            </a>
+            <button onClick={() => {
+                      console.log("Enquiry button clicked");
+                      openPopup();
+                    }} className="flex items-center justify-center space-x-2 bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg transition-colors duration-200">
+                      <Mail className="h-5 w-5" />
+                      <span>Email Inquiry</span>
+                    </button>
           </div>
         </div>
       </section>

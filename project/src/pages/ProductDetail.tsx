@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Check, Star, Phone, Mail } from 'lucide-react';
+import { usePopup } from '../context/PopupContext';
 
 const productDetails = {
   econovator: {
@@ -352,6 +353,7 @@ const productDetails = {
 export const ProductDetail: React.FC = () => {
   const { productId } = useParams<{ productId: string }>();
   const product = productId ? productDetails[productId as keyof typeof productDetails] : null;
+  const { openPopup } = usePopup();
 
   if (!product) {
     return (
@@ -452,13 +454,10 @@ export const ProductDetail: React.FC = () => {
               <Phone className="h-5 w-5" />
               <span>Call for Quote</span>
             </a>
-            <a
-              href="mailto:info@liftascomponents.com"
-              className="flex items-center justify-center space-x-2 bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
-            >
-              <Mail className="h-5 w-5" />
-              <span>Email Inquiry</span>
-            </a>
+            <button onClick={openPopup} className="flex items-center justify-center space-x-2 bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg transition-colors duration-200">
+                      <Mail className="h-5 w-5" />
+                      <span>Email Inquiry</span>
+                      </button>
           </div>
         </div>
       </div>
@@ -530,13 +529,13 @@ export const ProductDetail: React.FC = () => {
                       <Phone className="h-5 w-5" />
                       <span>Call for Quote</span>
                     </a>
-                    <a
-                      href="mailto:info@trezorelevators.com"
-                      className="flex items-center justify-center space-x-2 bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
-                    >
+                    <button onClick={() => {
+      console.log("Enquiry button clicked");
+      openPopup();
+    }} className="flex items-center justify-center space-x-2 bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg transition-colors duration-200">
                       <Mail className="h-5 w-5" />
                       <span>Email Inquiry</span>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>

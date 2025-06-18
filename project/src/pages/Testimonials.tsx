@@ -1,5 +1,6 @@
-import React from 'react';
+import React  from 'react';
 import { Star, Quote, Building, Users, Award } from 'lucide-react';
+import { usePopup } from '../context/PopupContext';
 
 const testimonials = [
   {
@@ -119,7 +120,11 @@ const stats = [
   }
 ];
 
+
+
+
 export const Testimonials: React.FC = () => {
+  const { openPopup } = usePopup();
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
@@ -128,6 +133,9 @@ export const Testimonials: React.FC = () => {
       />
     ));
   };
+
+  
+
 
   return (
     <div className="pt-24 pb-20">
@@ -240,14 +248,13 @@ export const Testimonials: React.FC = () => {
             that our clients rave about. Let us help you with your elevator needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button onClick={() => { openPopup();
+    }} className="bg-yellow-700 hover:bg-yellow-800 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200">
+                      {/* <Mail className="h-5 w-5" /> */}
+                      <span>Email Inquiry</span>
+                    </button>
             <a
-              href="/contact"
-              className="bg-white text-yellow-600 hover:bg-yellow-50 font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
-            >
-              Get Your Quote
-            </a>
-            <a
-              href="tel:+919354927034"
+              href="tel:08045729031"
               className="bg-yellow-700 hover:bg-yellow-800 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
             >
               Call Us Today

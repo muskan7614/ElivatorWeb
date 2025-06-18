@@ -16,7 +16,8 @@ import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TrezorStory } from './pages/TrezorStory';
 import { Testimonials } from './pages/Testimonials';
 import { WhatsAppFloatingButton } from './components/WhatsAppFloatingButton';
-
+import InquiryPopup from './components/InquiryPopup';
+import ThankYou from './pages/ThankYou'; 
 function App() {
   return (
     <Router>
@@ -37,8 +38,10 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/trezor-story" element={<TrezorStory />} />
             <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/thankyou" element={<ThankYou />} />
           </Routes>
         </main>
+         <InquiryPopup />
         <Footer />
         <WhatsAppFloatingButton />
       </div>

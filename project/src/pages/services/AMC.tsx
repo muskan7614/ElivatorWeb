@@ -1,7 +1,9 @@
 import React from 'react';
 import { Shield, Clock, Wrench, Phone, CheckCircle } from 'lucide-react';
+import { usePopup } from '../../context/PopupContext';
 
 export const AMC: React.FC = () => {
+  const { openPopup } = usePopup();
   const packages = [
     {
       name: 'Basic AMC',
@@ -116,12 +118,13 @@ export const AMC: React.FC = () => {
               <Phone className="h-5 w-5" />
               <span>Call Now</span>
             </a>
-            <a
-              href="mailto:info@trezorelevators.com"
-              className="inline-flex items-center justify-center space-x-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
-            >
-              <span>Get Quote</span>
-            </a>
+            <button onClick={() => {
+                      console.log("Enquiry button clicked");
+                      openPopup();
+                    }} className="inline-flex items-center justify-center space-x-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200">
+                      {/* <Mail className="h-5 w-5" /> */}
+                      <span>Get Quote</span>
+                    </button>
           </div>
         </div>
       </section>
