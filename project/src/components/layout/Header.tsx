@@ -130,24 +130,17 @@ const productLinks= [
               </Link>
               
 
-              <div className="relative group">
-              <Link
-                to="/products"
-                className={`font-medium transition-colors duration-200 ${
-                  isActiveLink('/products') ? 'text-yellow-700' : 'text-gray-700 hover:text-yellow-700'
-                }`}
-              >
-                
-                <div
-  className="relative"
+              <div
+  className="relative group"
   ref={productsDropdownRef}
   onMouseEnter={() => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setIsProductsOpen(true);
+    setIsServicesOpen(false);
   }}
   onMouseLeave={() => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
-    closeTimer.current = setTimeout(() => setIsProductsOpen(false), 5000);
+    closeTimer.current = setTimeout(() => setIsProductsOpen(false), 200);
   }}
 >
   <button className="flex items-center space-x-1 font-medium text-gray-700 hover:text-yellow-700 transition-colors duration-200">
@@ -169,18 +162,19 @@ const productLinks= [
     </div>
   )}
 </div>
+
    
- </Link>
-    </div>          <div
+           <div
                 className="relative"
                 ref={servicesDropdownRef}
                 onMouseEnter={() => {
                   if (closeTimer.current) clearTimeout(closeTimer.current);
                   setIsServicesOpen(true);
+                   setIsProductsOpen(false);
                 }}
                 onMouseLeave={() => {
                   if (closeTimer.current) clearTimeout(closeTimer.current);
-                  closeTimer.current = setTimeout(() => setIsServicesOpen(false), 5000);
+                  closeTimer.current = setTimeout(() => setIsServicesOpen(false), 200);
                 }}
               >
                 <button className="flex items-center space-x-1 font-medium text-gray-700 hover:text-yellow-700 transition-colors duration-200">

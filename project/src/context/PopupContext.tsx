@@ -18,7 +18,7 @@ export const PopupProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   useEffect(() => {
     const interval = setInterval(() => {
       openPopup();
-    }, 20000); // 5000 ms = 5 seconds
+    }, 40000); // 5000 ms = 5 seconds
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
