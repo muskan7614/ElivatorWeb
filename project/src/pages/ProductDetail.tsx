@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Check, Star, Phone, Mail } from 'lucide-react';
+import { ArrowLeft,  Star, Phone, Mail } from 'lucide-react';
 import { usePopup } from '../context/PopupContext';
 
 const productDetails = {

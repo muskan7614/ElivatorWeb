@@ -11,7 +11,7 @@ interface ContactFormData {
 }
 
 export const ContactSection: React.FC = () => {
-  const { register, handleSubmit, reset, formState: { errors } } = useForm<ContactFormData>();
+  const { register,  reset, formState: { errors } } = useForm<ContactFormData>();
 
   const onSubmit = (data: ContactFormData) => {
     console.log('Contact form submitted:', data);

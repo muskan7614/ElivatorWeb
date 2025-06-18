@@ -11,7 +11,7 @@ interface ContactFormData {
 }
 
 export const ContactUs: React.FC = () => {
-  const { register, handleSubmit, reset, formState: { errors } } = useForm<ContactFormData>();
+  const { register,  formState: { errors } } = useForm<ContactFormData>();
 
 
   const contactInfo = [

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Clock, Wrench, Phone, CheckCircle } from 'lucide-react';
+import { Shield, Clock, Wrench, Phone} from 'lucide-react';
 import { usePopup } from '../../context/PopupContext';
 
 export const AMC: React.FC = () => {
