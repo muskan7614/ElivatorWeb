@@ -14,11 +14,11 @@ export const PopupProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const openPopup = () => setIsOpen(true);
   const closePopup = () => setIsOpen(false);
 
-  // 🔁 Automatically open popup every 5 seconds
+  // 🔁 Automatically open popup every 60 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       openPopup();
-    }, 40000); // 5000 ms = 5 seconds
+    }, 60000); 
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);

@@ -39,6 +39,8 @@ function App() {
             <Route path="/trezor-story" element={<TrezorStory />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/thankyou" element={<ThankYou />} />
+            {/* <Route path="/products/:productId" element={<ProductDetail />} /> */}
+
           </Routes>
         </main>
          <InquiryPopup />

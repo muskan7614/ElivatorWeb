@@ -51,7 +51,7 @@ export const Header: React.FC = () => {
   };
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:info@trezorelevators.com';
+    window.location.href = 'mailto:info@liftascomponents.com';
   };
 
   const isActiveLink = (path: string) => {
@@ -60,18 +60,18 @@ export const Header: React.FC = () => {
 
   // At the top of your Navbar.tsx
 const productLinks= [
-  { id: 'econovator', name: 'Econovator' },
-  { id: 'premiavator', name: 'Premiavator' },
-  { id: 'elitavator', name: 'Elitavator' },
-  { id: 'eldevator', name: 'Eldevator' },
-  { id: 'medivator', name: 'Medivator' },
-  { id: 'cargolift', name: 'CargoLift' },
-  { id: 'homelift', name: 'HomeLift' },
-  { id: 'skylift', name: 'SkyLift' },
-  { id: 'greenlift', name: 'GreenLift' },
-  { id: 'smartlift', name: 'SmartLift' },
-  { id: 'luxlift', name: 'LuxLift' },
-  { id: 'quicklift', name: 'QuickLift' }
+  { id: 'passenger-lift', name: 'Passenger Lift' },
+  { id: 'elevator-lift', name: 'Elevator Lift' },
+  { id: 'residential-elevator', name: 'Residential Elevator' },
+  { id: 'freight-elevator', name: 'Freight Elevator' },
+  { id: 'capsule-elevator', name: 'Capsule Elevator' },
+  { id: 'passenger-lift-and-elevator', name: 'Passenger Lift And Elevator' },
+  { id: 'goods-lift', name: 'Goods Lift' },
+  { id: 'hospital-elevator', name: 'Hospital Elevator' },
+  { id: 'mrl-elevators', name: 'Mrl Elevators' },
+  { id: 'dumbwaiter-elevator', name: 'Dumbwaiter Elevator' },
+  { id: 'glass-elevator', name: 'Glass Elevator' },
+  { id: 'home-lift', name: 'Home Lift' }
 ];
 
 
@@ -104,7 +104,7 @@ const productLinks= [
               <span className="hidden sm:inline">Call Us</span>
             </button>
             <a
-              href="mailto:info@trezorelevators.com"
+              href="mailto:info@liftascomponents.com"
               className="flex items-center border border-yellow-600 space-x-2 bg-transparent-600 hover:bg-yellow-600 px-4 py-2 rounded-lg transition-colors duration-200"
             >
               <Mail className="h-4 w-4" />
@@ -143,10 +143,18 @@ const productLinks= [
     closeTimer.current = setTimeout(() => setIsProductsOpen(false), 200);
   }}
 >
+  <Link
+  to="/products"
+  className="flex items-center space-x-1 font-medium text-gray-700 hover:text-yellow-700 transition-colors duration-200"
+  onClick={() => {
+    setIsProductsOpen(false); // optional: close dropdown on click
+  }}
+>
   <button className="flex items-center space-x-1 font-medium text-gray-700 hover:text-yellow-700 transition-colors duration-200">
     <span>Products</span>
     <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`} />
   </button>
+  </Link>
 
   {isProductsOpen && (
     <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-100 py-2 z-50">
