@@ -231,7 +231,7 @@ export const Customisation: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+919354927034"
+              href="tel:9818190974"
               className="bg-white text-indigo-600 hover:bg-indigo-50 font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
             >
               Schedule Consultation

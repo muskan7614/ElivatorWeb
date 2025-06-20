@@ -115,20 +115,25 @@ export const Footer: React.FC = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-yellow-400 mt-1 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">
-                 Liftas Components Private Limited Dedicated Seat 07 Situated at B 38, Old DLF Sector 14, Gurugram, Haryana, 122006,  India
+                 Rajendra Park Rd, Jay Vihar, 
+Sector 110, Gurugram, Pawala 
+Khasrupur, Haryana 122001
+Dedicated Seat 07, Situated at B 38, Block 
+M, Old DLF Colony, Sector 14, Gurugram, 
+Haryana 122006
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-yellow-400" />
-                <a href="tel:08045729031" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="tel:9818190974" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Call Us
-                 08045729031
+                 9818190974 / 8979280320
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-yellow-400" />
-                <a href="mailto:info@liftascomponents.com" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  info@liftascomponents.com
+                <a href="mailto:info@liftaselevators.com" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  info@liftaselevators.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">

@@ -27,7 +27,7 @@ export const PrivacyPolicy: React.FC = () => {
               <strong>Last Updated:</strong> January 1, 2024
             </p>
             <p className="text-gray-700 leading-relaxed mt-2">
-              This Privacy Policy describes how Trezor Elevators ("we," "our," or "us") collects, 
+              This Privacy Policy describes how Liftas Components ("we," "our," or "us") collects, 
               uses, and protects your personal information when you visit our website or use our services.
             </p>
           </div>
@@ -231,9 +231,14 @@ export const PrivacyPolicy: React.FC = () => {
                 If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us:
               </p>
               <div className="space-y-2 text-gray-700">
-                <p><strong>Email:</strong> privacy@liftascomponents.com</p>
-                <p><strong>Phone:</strong> 08045729031</p>
-                <p><strong>Address:</strong> Liftas Components Private Limited Dedicated Seat 07 Situated at B 38, Old DLF Sector 14, Gurugram, Haryana, 122006,  India</p>
+                <p><strong>Email:</strong> info@liftaselevators.com</p>
+                <p><strong>Phone:</strong>9818190974</p>
+                <p><strong>Address:</strong> Address: Rajendra Park Rd, Jay Vihar, 
+Sector 110, Gurugram, Pawala 
+Khasrupur, Haryana 122001
+Dedicated Seat 07, Situated at B 38, Block 
+M, Old DLF Colony, Sector 14, Gurugram, 
+Haryana 122006</p>
               </div>
             </div>
 

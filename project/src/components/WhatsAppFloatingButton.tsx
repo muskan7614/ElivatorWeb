@@ -1,7 +1,7 @@
 import React from 'react';
 import whatsapp from '../Assets/whatsapp.png'
 
-const whatsappNumber = '08045729031'; // Project's phone number
+const whatsappNumber = '9818190974'; // Project's phone number
 const defaultMessage = encodeURIComponent('Hello, I am interested in your elevator solutions!');
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=${defaultMessage}`;
 

@@ -142,7 +142,7 @@ export const AMC: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+919354927034"
+              href="tel:9818190974"
               className="inline-flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
             >
               <Phone className="h-5 w-5" />

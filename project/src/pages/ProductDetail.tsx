@@ -90,7 +90,7 @@ export const ProductDetail: React.FC = () => {
                     <p className="text-gray-600 mb-4 leading-relaxed">{sub.description}</p>
                     <div className="flex gap-4 mb-4">
                       <a
-                        href="tel:08045729031"
+                        href="tel:9818190974"
                         className="inline-flex items-center border border-yellow-700 text-black-500 px-3 py-1 rounded hover:bg-yellow-600"
                       >
                         <Phone className="h-4 w-4 mr-2" />

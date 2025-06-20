@@ -47,11 +47,11 @@ export const Header: React.FC = () => {
   }, [isProductsOpen]);
 
   const handleCallClick = () => {
-    window.location.href = 'tel:08045729031';
+    window.location.href = 'tel:9818190974';
   };
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:info@liftascomponents.com';
+    window.location.href = 'mailto:info@liftaselevators.com';
   };
 
   const isActiveLink = (path: string) => {
@@ -104,7 +104,7 @@ const productLinks= [
               <span className="hidden sm:inline">Call Us</span>
             </button>
             <a
-              href="mailto:info@liftascomponents.com"
+              href="mailto:info@liftaselevators.com"
               className="flex items-center border border-yellow-600 space-x-2 bg-transparent-600 hover:bg-yellow-600 px-4 py-2 rounded-lg transition-colors duration-200"
             >
               <Mail className="h-4 w-4" />

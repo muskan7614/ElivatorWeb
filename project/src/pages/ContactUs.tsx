@@ -18,22 +18,22 @@ export const ContactUs: React.FC = () => {
     {
       icon: MapPin,
       title: 'Our Address',
-      details: 'Liftas Components Private Limited Dedicated Seat 07 Situated at B 38, Old DLF Sector 14, Gurugram, Haryana, 122006,  India'
+      details: 'Rajendra Park Rd, Jay Vihar, Sector 110, Gurugram, Pawala Khasrupur, Haryana 122001 Dedicated Seat 07, Situated at B 38, Block M, Old DLF Colony, Sector 14, Gurugram, Haryana 122006'
     },
     {
       icon: Phone,
       title: 'Phone Number',
-      details: '08045729031'
+      details: '9818190974'
     },
     {
       icon: Mail,
       title: 'Email Address',
-      details: 'info@liftascomponents.com'
+      details: 'info@liftaselevators.com'
     },
     {
       icon: Clock,
       title: 'Business Hours',
-      details: 'Monday - Saturday: 9:00 AM - 6:00 PM\nSunday: Emergency Services Only'
+      details: 'Monday - Saturday: 9:00 AM - 6:00 PM\nSunday: Open to Services Team'
     }
   ];
 
@@ -86,7 +86,7 @@ export const ContactUs: React.FC = () => {
                 Send us a Message
               </h2>
               {/* Form */}
-        <form action='https://formsubmit.co/your-email@gmail.com' method='POST' className="space-y-4 text-sm">
+        <form action='https://formsubmit.co/info@liftaselevators.com' method='POST' className="space-y-4 text-sm">
           {/* Basic Information */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
@@ -274,7 +274,12 @@ export const ContactUs: React.FC = () => {
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.307530292468!2d77.04271757450333!3d28.470283791431896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d198c9f0ebf03%3A0x58bba09948b2032a!2sLiftas%20Components%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1750220010703!5m2!1sen!2sin" width="600" height="450" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
-                  Our office is conveniently located in Chattarpur Extension, New Delhi. 
+                  Our office is conveniently located in Rajendra Park Rd, Jay Vihar, 
+Sector 110, Gurugram, Pawala 
+Khasrupur, Haryana 122001
+Dedicated Seat 07, Situated at B 38, Block 
+M, Old DLF Colony, Sector 14, Gurugram, 
+Haryana 122006. 
                   We welcome visitors by appointment and are easily accessible by public transport.
                 </p>
               </div>
@@ -287,7 +292,7 @@ export const ContactUs: React.FC = () => {
                   For emergency elevator repairs and breakdowns, our 24/7 hotline is always available.
                 </p>
                 <a
-                  href="tel:08045729031"
+                  href="tel:9818190974"
                   className="inline-flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
                 >
                   <Phone className="h-5 w-5" />

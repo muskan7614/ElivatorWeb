@@ -57,7 +57,7 @@ export const InquiryPopup: React.FC = () => {
         </div>
 
         {/* Form */}
-        <form action='https://formsubmit.co/your-email@gmail.com' method='POST' className="space-y-4 text-sm">
+        <form action='https://formsubmit.co/info@liftaselevators.com' method='POST' className="space-y-4 text-sm">
           {/* Basic Information */}
           {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-3"> */}
             <div>

@@ -83,7 +83,7 @@ export const Repair: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-4">
             <Clock className="h-6 w-6 animate-pulse" />
-            <span className="text-lg font-semibold">24/7 Emergency Repair Hotline: +91-9354927034</span>
+            <span className="text-lg font-semibold">24/7 Emergency Repair Hotline: 9818190974</span>
           </div>
         </div>
       </section>

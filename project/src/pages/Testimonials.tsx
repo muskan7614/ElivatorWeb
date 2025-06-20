@@ -254,7 +254,7 @@ export const Testimonials: React.FC = () => {
                       <span>Email Inquiry</span>
                     </button>
             <a
-              href="tel:08045729031"
+              href="tel:9818190974"
               className="bg-yellow-700 hover:bg-yellow-800 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
             >
               Call Us Today

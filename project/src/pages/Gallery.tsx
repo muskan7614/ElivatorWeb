@@ -242,7 +242,7 @@ export const Gallery: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:08045729031"
+              href="tel:9818190974"
               className="bg-white text-black-600 hover:bg-yellow-700 border border-yellow-600 font-semibold px-8 py-4 rounded-lg transition-colors duration-200 text-black"
             >
               Call for Consultation
