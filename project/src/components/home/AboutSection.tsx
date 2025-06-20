@@ -1,6 +1,7 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
 // import { ArrowRight } from 'lucide-react';
+import Quality from '../../Assets/Home-page-Quality-Assurance-443x320.jpg'
 
 export const AboutSection: React.FC = () => {
   return (
@@ -35,7 +36,7 @@ export const AboutSection: React.FC = () => {
             <div className="relative bg-white p-8 rounded-2xl shadow-xl">
               <div 
                 className="w-full h-80 bg-cover bg-center rounded-lg mb-6"
-                style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&h=400&q=80)' }}
+                style={{ backgroundImage: `url(${Quality})` }}
               />
               <div className="bg-blue-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">

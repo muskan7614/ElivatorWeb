@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import home from '../../Assets/home.jpg';
-import home1 from '../../Assets/home1.jpg';
-import home2 from '../../Assets/home2.jpg';
-import home3 from '../../Assets/home3.jpg';
-import home5 from '../../Assets/home5.jpg';
+import Home1 from '../../Assets/Home-heroSlider-image-1.jpg'
+import Home2 from '../../Assets/Home-heroSlider-image-2.jpg'
+import Home3 from '../../Assets/Home-heroSlider-image-3.jpg'
+import Home4 from '../../Assets/Home-heroSlider-image-4.jpg'
+import Home5 from '../../Assets/Home-heroSlider-image-5.jpg'
 
 const slides = [
   {
     id: 1,
-    image: home,
+    image: Home1,
     title: 'Modern Elevator Solutions',
     subtitle: 'Elevating Your Expectations',
     description: 'Experience premium elevator technology with our state-of-the-art installations and maintenance services.',
@@ -18,7 +18,7 @@ const slides = [
   },
   {
     id: 2,
-    image: home1,
+    image: Home2,
     title: 'Professional Installation',
     subtitle: 'Quality & Reliability',
     description: 'Our expert team ensures seamless elevator installation with the highest standards of safety and performance.',
@@ -26,7 +26,7 @@ const slides = [
   },
   {
     id: 3,
-    image: home2,
+    image: Home3,
     title: 'Advanced Technology',
     subtitle: 'Innovation at Every Floor',
     description: 'Discover our cutting-edge elevator systems designed for efficiency, comfort, and sustainability.',
@@ -34,7 +34,7 @@ const slides = [
   },
   {
     id: 4,
-    image: home3,
+    image: Home4,
     title: '24/7 Maintenance',
     subtitle: 'Always At Your Service',
     description: 'Round-the-clock support and maintenance services to keep your elevators running smoothly.',
@@ -42,7 +42,7 @@ const slides = [
   },
   {
     id: 5,
-    image: home5,
+    image: Home5,
     title: 'Custom Solutions',
     subtitle: 'Tailored to Your Needs',
     description: 'Bespoke elevator solutions designed to meet your specific requirements and architectural vision.',

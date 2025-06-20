@@ -1,17 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star } from 'lucide-react';
-import Econovator2 from '../Assets/Econovator2.jpg'
-import Premiavator1 from '../Assets/Premiavator1.jpg'
-import Elitavator1 from '../Assets/Elitavator1.jpg'
-
-
+import Productpage1 from '../Assets/Product-Page-1.jpg'
+import Productpage2 from '../Assets/Product-Page-2.jpg'
+import Productpage3 from '../Assets/Product-Page-3.jpg'
+import Productpage4 from '../Assets/Product-Page-4.jpg'
+import Productpage5 from '../Assets/Product-Page-5.jpg'
+import Productpage6 from '../Assets/Product-Page-6.jpg'
+import Productpage7 from '../Assets/Product-Page-7.jpg'
+import Productpage8 from '../Assets/Product-Page-8.jpg'
+import Productpage9 from '../Assets/Product-Page-9.jpg'
+import Productpage10 from '../Assets/Product-Page-10.jpg'
+import Productpage11 from '../Assets/Product-Page-11.jpg'
+import Productpage12 from '../Assets/Product-Page-12.jpg'
 const products = [
   {
     id: 'passenger-lift',
     name: 'Passenger Lift',
     category: 'Budget-Friendly',
-    image: Econovator2,
+    image: Productpage1 ,
     description: 'Cost-effective elevator solution without compromising on safety and reliability.',
     features: ['Energy Efficient', 'Compact Design', 'Easy Maintenance', 'Budget-Friendly'],
     price: 'Starting from ₹8,50,000',
@@ -21,10 +28,10 @@ const products = [
         id: 'premiavators-floater',
         name: 'Premiavators Floater Passenger Lift',
         images: [
-          Econovator2,
-          Econovator2,
-          Premiavator1,
-          Premiavator1,
+          Productpage1,
+          Productpage1,
+          Productpage1,
+          Productpage1,
         ],
         price: 'Rs 14,50,000',
         specs: {
@@ -89,7 +96,7 @@ const products = [
     id: 'elevator-lift',
     name: 'Elevator Lift',
     category: 'Premium Series',
-    image: Premiavator1,
+    image: Productpage2,
     description: 'Premium elevator with advanced features and elegant design for luxury spaces.',
     features: ['Smart Controls', 'Premium Finishes', 'Quiet Operation', 'Advanced Safety'],
     price: 'Starting from ₹15,00,000',
@@ -149,7 +156,7 @@ const products = [
     id: 'residential-elevator',
     name: 'Residential Elevators',
     category: 'Elite Series',
-    image: Elitavator1,
+    image: Productpage3,
     description: 'Elite series elevator with cutting-edge technology and superior performance.',
     features: ['IoT Enabled', 'Touchscreen Controls', 'Biometric Access', 'Energy Star Rated'],
     price: 'Starting from ₹25,00,000',
@@ -226,7 +233,7 @@ const products = [
     id: 'freight-elevator',
     name: 'Freight Elevator',
     category: 'Elderly Friendly',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=400&h=300&q=80',
+    image:  Productpage4,
     description: 'Specially designed elevator with accessibility features for elderly and disabled users.',
     features: ['Wheelchair Accessible', 'Audio Announcements', 'Large Buttons', 'Emergency Phone'],
     price: 'Starting from ₹12,00,000',
@@ -303,7 +310,7 @@ const products = [
     id: 'capsule-elevator',
     name: 'Capsule Elevator',
     category: 'Medical Grade',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=400&h=300&q=80',
+    image: Productpage5,
     description: 'Hospital-grade elevator designed for medical facilities with stretcher compatibility.',
     features: ['Stretcher Compatible', 'Antibacterial Coating', 'Emergency Power', 'Smooth Operation'],
     price: 'Starting from ₹18,00,000',
@@ -363,7 +370,7 @@ const products = [
     id: 'passenger-lift-and-elevator',
     name: 'Passenger Lift And Elevator',
     category: 'Freight Elevator',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=400&h=300&q=80',
+    image: Productpage6,
     description: 'Heavy-duty freight elevator for industrial and commercial cargo transportation.',
     features: ['High Load Capacity', 'Durable Construction', 'Industrial Grade', 'Weather Resistant'],
     price: 'Starting from ₹20,00,000',
@@ -425,7 +432,7 @@ const products = [
     id: 'goods-lift',
     name: 'Goods Lift',
     category: 'Residential',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&h=300&q=80',
+    image: Productpage7,
     description: 'Compact home elevator perfect for residential buildings and private homes.',
     features: ['Space Saving', 'Home Integration', 'Quiet Operation', 'Custom Interiors'],
     price: 'Starting from ₹10,00,000',
@@ -487,7 +494,7 @@ const products = [
     id: 'hospital-elevator',
     name: 'Hospital Elevator',
     category: 'High-Rise',
-    image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=400&h=300&q=80',
+    image: Productpage8,
     description: 'High-speed elevator designed for tall buildings and skyscrapers.',
     features: ['High Speed', 'Advanced Control', 'Energy Efficient', 'Destination Control'],
     price: 'Starting from ₹30,00,000',
@@ -544,7 +551,7 @@ const products = [
     id: 'mrl-elevators',
     name: 'Mrl Elevators',
     category: 'Eco-Friendly',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=400&h=300&q=80',
+    image: Productpage9,
     description: 'Environmentally conscious elevator with green technology and energy recovery.',
     features: ['Energy Recovery', 'LED Lighting', 'Eco Materials', 'Carbon Neutral'],
     price: 'Starting from ₹16,00,000',
@@ -592,7 +599,7 @@ const products = [
     id: 'dumbwaiter-elevator',
     name: 'Dumbwaiter Elevator',
     category: 'Smart Technology',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=400&h=300&q=80',
+    image: Productpage10,
     description: 'AI-powered smart elevator with predictive maintenance and IoT connectivity.',
     features: ['AI Powered', 'Predictive Maintenance', 'Remote Monitoring', 'App Control'],
     price: 'Starting from ₹22,00,000',
@@ -601,7 +608,7 @@ const products = [
       {
         id: 'automatic-dumbwaiter-lift',
         name: 'Automatic Dumbwaiter Lift',
-        images: ['/assets/dumbwaiter-kitchen1.jpg', '/assets/dumbwaiter-kitchen2.jpg', '/assets/dumbwaiter-kitchen2.jpg'],
+        images: [Productpage10, Productpage10, Productpage10],
         price: 'Rs 5,00,000',
         specs: {
           'Material':'Stainless Steel',
@@ -637,7 +644,7 @@ const products = [
     id: 'glass-elevator',
     name: 'Glass Elevator',
     category: 'Luxury',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=400&h=300&q=80',
+    image: Productpage11,
     description: 'Ultra-luxury elevator with bespoke design and premium materials.',
     features: ['Bespoke Design', 'Premium Materials', 'Custom Lighting', 'Concierge Integration'],
     price: 'Starting from ₹35,00,000',
@@ -667,7 +674,7 @@ const products = [
     id: 'home-lift',
     name: 'Home Lift',
     category: 'Express',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&h=300&q=80',
+    image: Productpage12,
     description: 'Express elevator for buildings requiring fast vertical transportation.',
     features: ['Express Service', 'High Capacity', 'Fast Installation', 'Minimal Waiting'],
     price: 'Starting from ₹14,00,000',

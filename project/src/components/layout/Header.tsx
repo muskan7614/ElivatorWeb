@@ -60,18 +60,18 @@ export const Header: React.FC = () => {
 
   // At the top of your Navbar.tsx
 const productLinks= [
-  { id: 'passenger-lift', name: 'Passenger Lift' },
-  { id: 'elevator-lift', name: 'Elevator Lift' },
-  { id: 'residential-elevator', name: 'Residential Elevator' },
-  { id: 'freight-elevator', name: 'Freight Elevator' },
-  { id: 'capsule-elevator', name: 'Capsule Elevator' },
-  { id: 'passenger-lift-and-elevator', name: 'Passenger Lift And Elevator' },
-  { id: 'goods-lift', name: 'Goods Lift' },
-  { id: 'hospital-elevator', name: 'Hospital Elevator' },
-  { id: 'mrl-elevators', name: 'Mrl Elevators' },
-  { id: 'dumbwaiter-elevator', name: 'Dumbwaiter Elevator' },
-  { id: 'glass-elevator', name: 'Glass Elevator' },
-  { id: 'home-lift', name: 'Home Lift' }
+  { id: 'econovator', name: 'Econovator' },
+  { id: 'premiavator', name: 'Premiavator' },
+  { id: 'elitavator', name: 'Elitavator' },
+  { id: 'eldevator', name: 'Eldevator' },
+  { id: 'medivator', name: 'Medivator' },
+  { id: 'cargolift', name: 'CargoLift' },
+  { id: 'homelift', name: 'HomeLift' },
+  { id: 'skylift', name: 'SkyLift' },
+  { id: 'greenlift', name: 'GreenLift' },
+  { id: 'smartlift', name: 'SmartLift' },
+  { id: 'luxlift', name: 'LuxLift' },
+  { id: 'quicklift', name: 'QuickLift' }
 ];
 
 

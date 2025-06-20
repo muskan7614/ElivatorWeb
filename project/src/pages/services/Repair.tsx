@@ -1,5 +1,6 @@
 import React from 'react';
 import { Clock, Wrench, Shield, CheckCircle } from 'lucide-react';
+import Repairimage from '../../Assets/Services-repair---507x335.jpg'
 
 
 export const Repair: React.FC = () => {
@@ -158,7 +159,7 @@ export const Repair: React.FC = () => {
             
             <div>
               <img
-                src="https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src={Repairimage}
                 alt="Elevator Repair"
                 className="w-full rounded-2xl shadow-xl"
               />

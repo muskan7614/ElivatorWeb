@@ -1,15 +1,15 @@
 import React from 'react';
-import UrbanLift from '../../Assets/UrbanLift.png'
+import UrbanLift from '../../Assets/UrbanLift.jpg'
 import TechCorp from '../../Assets/TechCorp.jpg'
-import BuildMax from '../../Assets/BuildMax.png'
-import MetroHomes from '../../Assets/MetroHomes.png'
-import SkyTower from '../../Assets/SkyTower.png'
-import PrimeBuild from '../../Assets/PrimeBuild.png'
-import eliteSpace from '../../Assets/eliteSpace.jpg'
-import ModernArch from '../../Assets/ModernArch.png'
+import BuildMax from '../../Assets/BuildMax.jpg'
+import MetroHomes from '../../Assets/MetroHomes.jpg'
+import SkyTower from '../../Assets/SkyTower.jpg'
+import PrimeBuild from '../../Assets/PrimeBuild.jpg'
+import eliteSpace from '../../Assets/EliteSpaces.jpg'
+import ModernArch from '../../Assets/ModernArch.jpg'
 import CityScape from '../../Assets/CityScape.png'
-import NextGen from '../../Assets/NextGen.png'
-import ProBuild from '../../Assets/ProBuild.jpg'
+import NextGen from '../../Assets/NextGen.jpg'
+import ProBuild from '../../Assets/Pro-Elevator.jpg'
 
 const clients = [
   { id: 1, name: 'TechCorp', logo: TechCorp },

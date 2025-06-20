@@ -1,9 +1,29 @@
 import React from 'react';
 import { usePopup } from '../context/PopupContext';
 import logo from '../Assets/logo.webp'
+import { useForm } from 'react-hook-form';
+// import { Send } from 'lucide-react';
+
+interface ContactFormData {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+}
+
 
 export const InquiryPopup: React.FC = () => {
   const { isOpen, closePopup } = usePopup();
+  const { register,  reset, formState: { errors } } = useForm<ContactFormData>();
+
+  const onSubmit = (data: ContactFormData) => {
+    console.log('Contact form submitted:', data);
+    // Here you would typically send the data to your backend
+    alert('Thank you for your message! We will get back to you soon.');
+    reset();
+  };
+
 
   if (!isOpen) return null;
 
@@ -37,88 +57,46 @@ export const InquiryPopup: React.FC = () => {
         </div>
 
         {/* Form */}
-        <form action='https://formsubmit.co/your-email@gmail.com' method='POST' className="space-y-3 text-sm">
-  {/* Name + Phone in 1 Row */}
-  <div className="flex flex-col sm:flex-row gap-3">
-    <div className="w-full">
+        <form action='https://formsubmit.co/your-email@gmail.com' method='POST' className="space-y-4 text-sm">
+          {/* Basic Information */}
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-3"> */}
+            <div>
+              <label className="block font-medium text-gray-700">Full Name <span className="text-red-500">*</span></label>
+              <input type="text" name="Full Name" className="w-full border rounded px-3 py-2 text-sm" placeholder="Your name" required />
+            </div>
+            
+            <div>
+              <label className="block font-medium text-gray-700">Contact Number <span className="text-red-500">*</span></label>
+              <input type="tel" name="Contact Number" className="w-full border rounded px-3 py-2 text-sm" placeholder="Your phone" required />
+            </div>
+            <div>
+                              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                                Email Address *
+                              </label>
+                              <input
+                                type="email"
+                                id="email"
+                                {...register('email', { 
+                                  required: 'Email is required',
+                                  pattern: {
+                                    value: /^\S+@\S+$/i,
+                                    message: 'Please enter a valid email address'
+                                  }
+                                })}
+                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-200"
+                                placeholder="Enter your email address"
+                              />
+                              {errors.email && (
+                                <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
+                              )}
+                            </div>
+            
+          {/* </div> */}
 
-      <label className="block font-medium text-gray-700">
-        Name <span className="text-red-500">*</span>
-      </label>
-      <input
-        type="text"
-        className="w-full border rounded px-3 py-2 text-sm"
-        placeholder="Your name"
-        required
-      />
-    </div>
 
-    <div className="w-full">
-      <label className="block font-medium text-gray-700">
-        Phone <span className="text-red-500">*</span>
-      </label>
-      <input
-        type="tel"
-        className="w-full border rounded px-3 py-2 text-sm"
-        placeholder="Your phone"
-        required
-      />
-    </div>
-  </div>
-
-  {/* Email */}
-  <div>
-    <label className="block font-medium text-gray-700">
-      Email <span className="text-red-500">*</span>
-    </label>
-    <input
-      type="email"
-      className="w-full border rounded px-3 py-2 text-sm"
-      placeholder="Your email"
-      required
-    />
-  </div>
-
-  {/* Service Question */}
-  <div>
-    <label className="block font-medium text-gray-700">What service do you need? </label>
-    <input
-      type="text"
-      className="w-full border rounded px-3 py-2 text-sm"
-      placeholder="Installation / AMC / Repair"
-    />
-  </div>
-
-  {/* Preferred Time */}
-  <div>
-    <label className="block font-medium text-gray-700">
-      Preferred visit/call time?
-    </label>
-    <input
-      type="text"
-      className="w-full border rounded px-3 py-2 text-sm"
-      placeholder="e.g. Tomorrow 11 AM"
-    />
-  </div>
-
-  {/* Comments */}
-  <div>
-    <label className="block font-medium text-gray-700">Comments</label>
-    <textarea
-      rows={2}
-      className="w-full border rounded px-3 py-2 text-sm resize-none"
-      placeholder="Any message"
-    ></textarea>
-  </div>
-
-  {/* Submit */}
-  <button
-    type="submit"
-    className="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 rounded font-semibold text-sm transition duration-200"
-  >
-    Submit Inquiry
-  </button>
-</form>
+          {/* Submit */}
+          <button type="submit" className="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 rounded font-semibold text-sm transition duration-200">Submit Inquiry</button>
+        </form>
 
       </div>
     </div>

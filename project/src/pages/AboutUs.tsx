@@ -1,27 +1,30 @@
 import React from 'react';
 import { Users, Award, Shield, Zap } from 'lucide-react';
+import Aboutus from '../Assets/About-us-507x380.jpg'
+import owner from '../Assets/owner.jpg'
+import saloni from '../Assets/saloni.jpg'
 
 export const AboutUs: React.FC = () => {
   const values = [
     {
       icon: Shield,
       title: 'Safety First',
-      description: 'Safety is our top priority in every project we undertake, ensuring compliance with international standards.'
+      description: ' All our products comply with national and international safety standards and are built with advanced safety mechanisms.'
     },
     {
       icon: Award,
-      title: 'Quality Excellence',
-      description: 'We maintain the highest quality standards through rigorous testing and continuous improvement processes.'
+      title: 'Reliability',
+      description: ' Robust manufacturing standards and professional execution ensure maximum uptime and operational efficiency.'
     },
     {
       icon: Zap,
       title: 'Innovation',
-      description: 'Embracing cutting-edge technology to deliver modern, efficient, and sustainable elevator solutions.'
+      description: 'Integration of the latest elevator technologies including microprocessor-based control systems and energy-efficient components.'
     },
     {
       icon: Users,
       title: 'Customer Focus',
-      description: 'Building lasting relationships through exceptional service and personalized attention to client needs.'
+      description: ' We emphasize personalized solutions and exceptional after-sales support withresponsive maintenance services and long-term AMCs.'
     }
   ];
 
@@ -46,29 +49,28 @@ export const AboutUs: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Our Journey
+                Company Overview
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Founded with a vision to revolutionize vertical transportation in India, 
-                Liftas Components has grown from a small startup to a leading name in the elevator industry. 
-                Our journey began with a simple mission: to provide safe, reliable, and innovative 
-                elevator solutions that enhance the way people move within buildings.
+                 Liftas Components Pvt. Ltd. is a leading elevator manufacturer and service provider based in Gurugram,
+ Haryana. Since its inception in 2016, Liftas has been committed to providing innovative, reliable, and safe
+ vertical transportation solutions across residential, commercial, and industrial sectors. We offer a
+ comprehensive suite of elevator systems including hydraulic, gearless traction, machine-room-less (MRL),
+ vacuum, and capsule elevators.
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Over the years, we have successfully completed 999+ projects, ranging from 
-                residential apartments to commercial complexes and industrial facilities. 
-                Our commitment to quality and customer satisfaction has earned us the trust 
-                of clients across diverse sectors.
+                 We also manufacture essential elevator components and accessories, offering an integrated ecosystem for
+ quality and safety in elevation technology
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              {/* <p className="text-lg text-gray-600 leading-relaxed">
                 Today, with a team of 50+ dedicated professionals and a comprehensive 
                 service network, we continue to set new standards in elevator technology, 
                 maintenance, and customer service.
-              </p>
+              </p> */}
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&h=600&q=80"
+                src={Aboutus}
                 alt="Liftas Components Office"
                 className="w-full rounded-2xl shadow-xl"
               />
@@ -110,63 +112,50 @@ export const AboutUs: React.FC = () => {
         </div>
       </section>
 
-      {/* Leadership Section */}
-      {/* <section className="py-20 px-4">
+      {/* Leadership/Owners Section */}
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Our Leadership
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Meet the experienced professionals who lead Trezor Elevators towards continued excellence.
+              Meet the visionaries who guide Liftas Components towards excellence.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
+          <div className="grid md:grid-cols-2 gap-10">
+            {/* Owner/CEO 1 */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center p-8">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&h=300&q=80"
-                alt="CEO"
-                className="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-lg"
+                src={owner}
+                alt="Amit Goel"
+                className=" object-top object-cover w-36 h-36 rounded-full shadow-lg mb-6 border-4 border-blue-100"
               />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Rajesh Kumar</h3>
-              <p className="text-blue-600 font-medium mb-4">Chief Executive Officer</p>
-              <p className="text-gray-600 leading-relaxed">
-                With over 20 years in the elevator industry, Rajesh leads our vision of 
-                delivering world-class vertical transportation solutions.
+              <h3 className="text-2xl font-bold text-gray-900 mb-1">Amit Goel</h3>
+              <p className="text-blue-600 font-medium mb-3"> Chief Executive Officer (CEO)</p>
+              <p className="text-gray-600 text-center">
+                 Amit brings over a decade of experience in project execution,
+ vendor coordination, and operational management. He leads the daily operations and client delivery at
+ Liftas.
               </p>
             </div>
-
-            <div className="text-center">
+            {/* Owner/CEO 2 */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center p-8">
               <img
-                src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=300&h=300&q=80"
-                alt="CTO"
-                className="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-lg"
+                src={saloni}
+                alt="Saloni Goel"
+                className="object-cover w-36 h-36 rounded-full shadow-lg mb-6 border-4 border-blue-100"
               />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Priya Sharma</h3>
-              <p className="text-blue-600 font-medium mb-4">Chief Technology Officer</p>
-              <p className="text-gray-600 leading-relaxed">
-                Priya drives our innovation initiatives, ensuring we stay ahead of 
-                technological advancements in elevator systems.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&h=300&q=80"
-                alt="COO"
-                className="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-lg"
-              />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Amit Patel</h3>
-              <p className="text-blue-600 font-medium mb-4">Chief Operations Officer</p>
-              <p className="text-gray-600 leading-relaxed">
-                Amit oversees our operations, ensuring smooth project execution and 
-                maintaining our high service standards.
+              <h3 className="text-2xl font-bold text-gray-900 mb-1">Saloni Goel</h3>
+              <p className="text-blue-600 font-medium mb-3"> Head of Human Resources (HR)</p>
+              <p className="text-gray-600 text-center">
+                Saloni has 10+ years of HR leadership experience and is
+ responsible for organizational development, recruitment, employee engagement, and workplace culture.
               </p>
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 };

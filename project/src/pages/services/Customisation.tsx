@@ -1,6 +1,10 @@
 import React from 'react';
 import { Palette, Settings, Lightbulb, Zap } from 'lucide-react';
 import { usePopup } from '../../context/PopupContext';
+import CustomizationImage1 from '../../Assets/Service-Customization-1.jpg'
+import CustomizationImage2 from '../../Assets/Service-Customization-2.jpg'
+import CustomizationImage3 from '../../Assets/Service-Customization-3.jpg'
+import CustomizationImage4 from '../../Assets/Service-Customization-4.jpg'
 
 export const Customisation: React.FC = () => {
   const { openPopup } = usePopup();
@@ -59,22 +63,22 @@ export const Customisation: React.FC = () => {
     {
       title: 'Luxury Hotel Elevator',
       description: 'Premium interior with marble finish and gold accents',
-      image: 'https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=600'
+      image: CustomizationImage1
     },
     {
       title: 'Corporate Office Tower',
       description: 'Modern glass design with smart access control',
-      image: 'https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=600'
+      image: CustomizationImage2
     },
     {
       title: 'Residential Complex',
       description: 'Warm wood paneling with soft LED lighting',
-      image: 'https://images.pexels.com/photos/2850189/pexels-photo-2850189.jpeg?auto=compress&cs=tinysrgb&w=600'
+      image: CustomizationImage3
     },
     {
       title: 'Shopping Mall',
       description: 'Colorful themed design with interactive displays',
-      image: 'https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=600'
+      image: CustomizationImage4
     }
   ];
 

@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { X, ChevronLeft, ChevronRight ,Mail} from 'lucide-react';
-import Econovator2 from '../Assets/Econovator2.jpg';
-import LuxuryHotelElevator from '../Assets/LuxuryHotelElevator.jpg';
-import residential1 from '../Assets/residential1.webp';
-import Hospital from '../Assets/Hospital.jpg';
-import ShoppingMall from '../Assets/ShoppingMall.jpg';
-import Corporate from '../Assets/Corporate.jpg';
-import Premium from '../Assets/Premium.jpg';
-import fivestar from '../Assets/fivestart.jpg';
-import MedicalCenter from '../Assets/MedicalCenter.jpg';
-import DepartMentStore from '../Assets/DepartMentStore.jpg';
-import Tech from '../Assets/Tech.jpg';
-import LuxuryApartment from '../Assets/LuxuryApartment.jpg';
+import Gallery1 from '../Assets/Gallery-1.jpg';
+import Gallery2 from '../Assets/Gallery-2.jpg';
+import Gallery3 from '../Assets/Gallery-3.jpg';
+import Gallery4 from '../Assets/Gallery-4.jpg';
+import Gallery5 from '../Assets/Gallery-5.jpg';
+import Gallery6 from '../Assets/Gallery-6.jpg';
+import Gallery7 from '../Assets/Gallery-7.jpg';
+import Gallery8 from '../Assets/Gallery-8.jpg';
+import Gallery9 from '../Assets/Gallery-9.jpg';
+import Gallery10 from '../Assets/Gallery-10.jpg';
+import Gallery11 from '../Assets/Gallery-11.jpg';
+import Gallery12 from '../Assets/Gallery-12.jpg';
 import { usePopup } from '../context/PopupContext';
 
 
@@ -19,73 +19,73 @@ import { usePopup } from '../context/PopupContext';
 const galleryImages = [
   {
     id: 1,
-    src: Econovator2,
+    src: Gallery1,
     title: 'Modern Office Elevator',
     category: 'Commercial'
   },
   {
     id: 2,
-    src: LuxuryHotelElevator,
+    src: Gallery2,
     title: 'Luxury Hotel Elevator',
     category: 'Hospitality'
   },
   {
     id: 3,
-    src: residential1,
+    src: Gallery3,
     title: 'Residential Complex',
     category: 'Residential'
   },
   {
     id: 4,
-    src: Hospital,
+    src: Gallery4,
     title: 'Hospital Elevator',
     category: 'Healthcare'
   },
   {
     id: 5,
-    src: ShoppingMall,
+    src: Gallery5,
     title: 'Shopping Mall Elevator',
     category: 'Retail'
   },
   {
     id: 6,
-    src: Corporate,
+    src: Gallery6,
     title: 'Corporate Headquarters',
     category: 'Commercial'
   },
   {
     id: 7,
-    src: Premium,
+    src: Gallery7,
     title: 'Premium Residential Tower',
     category: 'Residential'
   },
   {
     id: 8,
-    src: fivestar,
+    src: Gallery8,
     title: 'Five Star Hotel',
     category: 'Hospitality'
   },
   {
     id: 9,
-    src:MedicalCenter,
+    src: Gallery9,
     title: 'Medical Center',
     category: 'Healthcare'
   },
   {
     id: 10,
-    src: DepartMentStore,
+    src: Gallery10,
     title: 'Department Store',
     category: 'Retail'
   },
   {
     id: 11,
-    src: Tech,
+    src: Gallery11,
     title: 'Tech Campus',
     category: 'Commercial'
   },
   {
     id: 12,
-    src: LuxuryApartment,
+    src: Gallery12,
     title: 'Luxury Apartments',
     category: 'Residential'
   }

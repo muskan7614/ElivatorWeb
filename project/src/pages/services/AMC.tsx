@@ -1,6 +1,7 @@
 import React from 'react';
 import { Shield, Clock, Wrench, Phone} from 'lucide-react';
 import { usePopup } from '../../context/PopupContext';
+import AMCimage from '../../Assets/AMC-507x380.jpg'
 
 export const AMC: React.FC = () => {
   const { openPopup } = usePopup();
@@ -91,11 +92,40 @@ export const AMC: React.FC = () => {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&h=600&q=80"
+                src= {AMCimage}
                 alt="Elevator Maintenance"
                 className="w-full rounded-2xl shadow-xl"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* After-Sales Services & Why Choose Liftas Section (Side by Side) */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+          {/* After-Sales Services */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">After-Sales Services</h2>
+            <p className="text-gray-700 mb-6">Liftas is recognized for its prompt, professional, and personalized service. Our service division provides:</p>
+            <ul className="list-disc pl-6 text-gray-800 space-y-2 mb-6">
+              <li>24/7 emergency support</li>
+              <li>Scheduled maintenance services</li>
+              <li>Spare parts availability</li>
+              <li>AMC for elevators of all types</li>
+            </ul>
+            <p className="text-gray-600">Our service teams are strategically located across Delhi NCR to ensure rapid response times.</p>
+          </div>
+          {/* Why Choose Liftas */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Why Choose Liftas?</h2>
+            <ul className="list-disc pl-6 text-gray-800 space-y-2">
+              <li>Full vertical integration for better quality control</li>
+              <li>Diverse product range suitable for all project scales</li>
+              <li>Dedicated leadership with over a decade of industry expertise</li>
+              <li>Responsive customer service and maintenance team</li>
+              <li>High customer satisfaction with a proven track record in NCR</li>
+            </ul>
           </div>
         </div>
       </section>

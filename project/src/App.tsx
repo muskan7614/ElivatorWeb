@@ -18,9 +18,11 @@ import { Testimonials } from './pages/Testimonials';
 import { WhatsAppFloatingButton } from './components/WhatsAppFloatingButton';
 import InquiryPopup from './components/InquiryPopup';
 import ThankYou from './pages/ThankYou'; 
+import ScrollToTop from './components/ScrollToTop';
 function App() {
   return (
     <Router>
+       <ScrollToTop />
       <div className="min-h-screen bg-white">
         <Header />
         <main>
